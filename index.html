@@ -21,7 +21,7 @@
   <script type="text/javascript">
     var mapExtent = [-74.30350979, 40.57423192, -74.21563959, 40.64095794];
     var mapMinZoom = 11;
-    var mapMaxZoom = 17;
+    var mapMaxZoom = 16;
     var bounds = new L.LatLngBounds(
       new L.LatLng(mapExtent[1], mapExtent[0]),
       new L.LatLng(mapExtent[3], mapExtent[2]));
@@ -35,7 +35,7 @@
       tms: false
     };
     layer = L.tileLayer('Maps/{z}/{x}/{y}.png', options).addTo(map);
-    map.setZoom(12);
+    map.setZoom(13);
     
     L.marker([40.63903, -74.26952]).addTo(map);
     
