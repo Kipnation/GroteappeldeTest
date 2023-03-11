@@ -27,11 +27,13 @@ var map = L.map('map', {
 		zoom: 11,
 		center: L.latLng([40.719485, -74.030686]),
 		attributionControl: false,
-		maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0.5)
+		maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0)
 	}),
 	osmLayer = new L.TileLayer('Maps/{z}/{x}/{y}.png');
 
 map.addLayer(osmLayer);
+
+
 
 var baseLayers = [{name: "Groteappelde",
 		   layer: osmLayer
