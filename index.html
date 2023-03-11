@@ -38,7 +38,7 @@ var baseLayers = [{name: "Groteappelde",
 		 }]
 	  
 var overLayers = [{		 
-		 group: "Azorius",
+		 group: "Azorius Senate",
 		 layers: [{
 				active: true,
 				name: "Test Marker",
@@ -52,7 +52,7 @@ var overLayers = [{
 			 ]
 		 },
 		 {
-		 group: "Boros",
+		 group: "Boros Legion",
 		 layers: [{
 				active: true,
 				name: "Test Marker",
@@ -64,12 +64,93 @@ var overLayers = [{
 				layer: L.marker([40.57541, -74.21777])
 			  }
 			 ]
-		 }
+		 },
+		 {
+		 group: "Cult of Rakdos",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "Golgari Swarm",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },	 
+		 {
+		 group: "Gruul Clans",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "House Dimir",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "Izzet League",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "Orzhov Syndicate",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "Selesnya Conclave",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
+		 {
+		 group: "Simic Combine",
+		 layers: [{
+				
+			  },
+			  {
+			  	
+			  }
+			 ]
+		 },
 		 ];
 	  
 var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 	selectorGroup: true,
-	collapsibleGroups: true
+	collapsibleGroups: true,
+	collapsed: true
 });
 
 map.addControl(panelLayers);
