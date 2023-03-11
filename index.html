@@ -33,13 +33,17 @@ var map = L.map('map', {
 
 map.addLayer(osmLayer);
 
+var baseLayers = [{name: "Groteappelde",
+		   layer: osmLayer
+		 }]
+	  
 var overLayers = 
 [{group: "Azorius",
 		 layers: [{
 				active: true,
 				name: "Test Marker",
 				layer: L.marker([40.56074, -74.27472])
-}]}];
+}]}],
 [{group: "Boros",
 		 layers: [{
 				active: true,
