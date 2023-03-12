@@ -9,8 +9,8 @@
 	margin: 0;
 }
 .leaflet-panel-layers {
-	width: 60px;
-	min-width: 60px;
+	width: 30px;
+	min-width: 30px;
 }
 .leaflet-panel-layers.expanded {
 	width: auto;
@@ -36,7 +36,7 @@
 	cursor: pointer;
 }
 .leaflet-panel-layers-title .leaflet-panel-layers-selector {
-	float: right;
+	float: left;
 }
 
 .leaflet-panel-layers-group {
