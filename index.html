@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Groteappelde</title>
+    <link rel="icon" type="image/png" href="Icons/Threefold Symbol.png">
+
     <meta http-equiv="imagetoolbar" content="no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.css">
     <link rel="stylesheet" href="Plugins/leaflet-panel-layers.css" />
@@ -15,17 +18,17 @@
     <script src="Plugins/leaflet.geocsv.js"></script>
     <script src='Plugins/Leaflet.fullscreen.min.js'></script>
     <script src="Plugins/L.Control.BetterScale.js"></script>
-	<script src="Plugins/leaflet-panel-layers.js"></script>
-  <script src="Layers/Marker Data/AzoriusGuildhall.js"></script>
-  <script src="Layers/Marker Data/AzoriusPrecinctOffice.js"></script>
-	<script src="Layers/Marker Data/AzoriusDistrictOffice.js"></script>
-	<script src="Layers/Marker Data/BorosGarrisons.js"></script>
+  	<script src="Plugins/leaflet-panel-layers.js"></script>
+
+    <!--Scripts for GeoJSON files for Markers-->
+      <script src="Layers/Marker Data/AzoriusGuildhall.js"></script>
+      <script src="Layers/Marker Data/AzoriusPrecinctOffice.js"></script>
+	    <script src="Layers/Marker Data/AzoriusDistrictOffice.js"></script>
+	    <script src="Layers/Marker Data/BorosGarrisons.js"></script>
 
     <style>
-      
       body { margin:0; padding:0; width:100%; height:100%; background: #dddddd; }
       #map { position:absolute; top:0; bottom:0; width:100%; z-index: 1; }
-    
     </style>
   </head>
 
@@ -33,24 +36,26 @@
   <div id="map"></div>  
 
 <script>
-var map = L.map('map', {
-    fullscreenControl: true,
-		zoom: 11,
-		center: L.latLng([40.719485, -74.030686]),
-		attributionControl: false,
-		maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0)
-	}),
-	osmLayer = new L.TileLayer('Maps/{z}/{x}/{y}.png');
+  var map = L.map('map', {
+      fullscreenControl: true,
+      zoom: 11,
+      center: L.latLng([40.719485, -74.030686]),
+      attributionControl: false,
+      maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0)
+    }),
+    osmLayer = new L.TileLayer('Maps/{z}/{x}/{y}.png');
 
-map.addLayer(osmLayer);
+    map.addLayer(osmLayer);
 
-L.control.betterscale({maxWidth: 450}).addTo(map);  
+  L.control.betterscale({maxWidth: 450}).addTo(map);  
 
-function iconByName(name) {
-	return '<i class="icon icon-'+name+'"></i>';
-}
+  function iconByName(name) {
+    return '<i class="icon icon-'+name+'"></i>';
+  }
 
-  </script>
+</script>
+
+<!--Scripts for the Layers-->
 <script type="text/javascript" src="Layers/Marker Data/MarkerIcons.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/BaseLayer.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/MarkerLayer.js"></script>
