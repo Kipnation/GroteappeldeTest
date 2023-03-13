@@ -236,14 +236,86 @@ var overLayers = [
       {
       group: "Selesnya Conclave",
       collapsed: true,
-      layers: [{
-             name: "Test Marker",
-             layer: L.marker([40.63903, -74.26952])
+      layers: [
+        {
+          name: "Guildhall",
+          icon: iconByName('Selesnya'),
+          active: true,
+          layer: L.geoJson(SelesnyaGuildhall, {
+           style: function (feature) {
+               return feature.properties.style;
            },
-           {
-             name: "Test Marker",
-             layer: L.marker([40.62241, -74.28258])
-           }
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'lightgreen'}) });
+         }   
+        })
+        },
+        {
+          name: "Vernadi",
+          icon: iconByName('Selesnya'),
+          active: true,
+          layer: L.geoJson(SelesnyaVernadi, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'tree', prefix: 'fa', markerColor: 'lightgreen'}) });
+         }   
+        })
+        },
+        {
+          name: "Food Pantries",
+          icon: iconByName('Selesnya'),
+          active: true,
+          layer: L.geoJson(SelesnyaFoodPantries, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'plate-wheat', prefix: 'fa', markerColor: 'lightgreen'}) });
+         }   
+        })
+        },
+        {
+          name: "Community Centers",
+          icon: iconByName('Selesnya'),
+          active: true,
+          layer: L.geoJson(SelesnyaCommunityCenters, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'tree-city', prefix: 'fa', markerColor: 'lightgreen'}) });
+         }   
+        })
+        },       {
+          name: "Gardens",
+          icon: iconByName('Selesnya'),
+          active: true,
+          layer: L.geoJson(SelesnyaGardens, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'seedling', prefix: 'fa', markerColor: 'lightgreen'}) });
+         }   
+        })
+        },
           ]
       },
       {
