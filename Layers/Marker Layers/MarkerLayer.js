@@ -48,14 +48,90 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building', prefix: 'fa', markerColor: 'lightblue'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-flag', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
-         {
-          name: "Test Marker",
-          layer: L.marker([40.57541, -74.21777], {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) })
-        }
+      {
+        name: "Jeleen Buildings",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusJeleenBuildings, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-flag', prefix: 'fa', markerColor: 'lightblue'}) });
+       }   
+      })
+      },
+      {
+        name: "Lyev Buildings",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusLyevBuildings, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-shield', prefix: 'fa', markerColor: 'lightblue'}) });
+       }   
+      })
+      },
+      {
+        name: "Sova Buildings",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusSovaBuildings, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-columns', prefix: 'fa', markerColor: 'lightblue'}) });
+       }   
+      })
+      },
+      {
+        name: "Azorius Prisons",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusPrisons, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'dungeon', prefix: 'fa', markerColor: 'lightblue'}) });
+       }   
+      })
+      },
+      {
+        name: "POIs",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusPOIs, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'lightblue'}) });
+       }   
+      })
+      },
          ]
     },
     {
@@ -73,7 +149,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-shield', prefix: 'fa', markerColor: 'red'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'shield-halved', prefix: 'fa', markerColor: 'red'}) });
        }   
       })
            },
