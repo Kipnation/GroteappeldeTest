@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="Plugins/icons.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/ardhi/Leaflet.MousePosition/master/src/L.Control.MousePosition.js" type="text/javascript"></script>
-    <script src="Plugins/leaflet-panel-layers.js"></script>
+    <script src="Plugins/leaflet.geocsv.js"></script>
+	<script src="Plugins/leaflet-panel-layers.js"></script>
+	<script src="Layers/Marker Data/AzoriusDistrictOffice.js"></script>
+	<script src="Layers/Marker Data/AzoriusPrecinctOffice.js"></script>
+	<script src="Layers/Marker Data/BorosGarrisons.js"></script>
 
     <style>
       
@@ -23,7 +27,7 @@
 <body>
   <div id="map"></div>  
 
-  <script>
+<script>
 var map = L.map('map', {
 		zoom: 11,
 		center: L.latLng([40.719485, -74.030686]),
@@ -38,165 +42,10 @@ function iconByName(name) {
 	return '<i class="icon icon-'+name+'"></i>';
 }
 
-var baseLayers = [{name: "Groteappelde",
-		   layer: osmLayer
-		 }]
-	  
-var overLayers = [
-
-		 {
-		 name: "Bar",
-		 icon: iconByName('Azorius'),
-		 layer: L.marker([40.56074, -74.27472])
-		 },
-	
-		 {		 
-		 group: "Azorius Senate",
-		 icon: '<i class="icon icon-Azorius"></i>',
-		 icon: iconByName('Azorius'),
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.56074, -74.27472])
-			  },
-			  {
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60591, -74.27409])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Boros Legion",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60471, -74.27431])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.57541, -74.21777])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Cult of Rakdos",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.61056, -74.27659])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.59193, -74.29033])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Golgari Swarm",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60471, -74.27431])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.57541, -74.21777])
-			  }
-			 ]
-		 },	 
-		 {
-		 group: "Gruul Clans",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60471, -74.27431])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.57541, -74.21777])
-			  }
-			 ]
-		 },
-		 {
-		 group: "House Dimir",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60495, -74.27524])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.63277, -74.25576])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Izzet League",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.59997, -74.25834])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Orzhov Syndicate",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.60471, -74.27431])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.57541, -74.21777])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Selesnya Conclave",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.63903, -74.26952])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.62241, -74.28258])
-			  }
-			 ]
-		 },
-		 {
-		 group: "Simic Combine",
-		 layers: [{
-				active: true,
-				name: "Test Marker",
-				layer: L.marker([40.61296, -74.29110])
-			  },
-			  {
-			  	active: true,
-				name: "Test Marker",
-				layer: L.marker([40.59095, -74.22953])
-			  }
-			 ]
-		 },
-		 ];
-	  
-var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
-	selectorGroup: true,
-	collapsibleGroups: true,
-	collapsed: true
-});
-
-map.addControl(panelLayers);
-
   </script>
+<script type="text/javascript" src="Layers/Marker Data/MarkerIcons.js"></script>
+<script type="text/javascript" src="Layers/Marker Layers/BaseLayer.js"></script>
+<script type="text/javascript" src="Layers/Marker Layers/MarkerLayer.js"></script>
+
 </body>
 </html>

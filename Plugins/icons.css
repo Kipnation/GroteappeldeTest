@@ -37,3 +37,21 @@
 .icon-Simic {
 	background: url('Icons/Simic-Icon.png') center center no-repeat;
 }
+
+/* MARKERS */
+.leaflet-marker-icon {
+	padding: 2px;
+	text-align: center;
+}
+.marker-bar {
+	background: url('images/markers/bar.png') center center no-repeat;
+}
+.marker-fuel {
+	background: url('images/markers/fuel.png') center center no-repeat;
+}
+.marker-parking {
+	background: url('images/markers/parking.png') center center no-repeat;
+}
+.marker-drinking_water {
+	background: url('images/markers/drinking_water.png') center center no-repeat;
+}
