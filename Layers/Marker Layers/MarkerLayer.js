@@ -5,6 +5,22 @@ var overLayers = [
     collapsed: true,
     layers: [
       {
+        name: "Guildhall",
+        icon: iconByName('Azorius'),
+        active: true,
+        layer: L.geoJson(AzoriusGuildhall, {
+         style: function (feature) {
+             return feature.properties.style;
+         },
+         onEachFeature: function (feature, layer) {
+             layer.bindPopup(feature.properties.Title);
+         },
+         pointToLayer: function(feature,latlng){
+           return L.marker(latlng,{icon: AIcon});
+       }   
+      })
+      },
+      {
         name: "Precinct Offices",
         icon: iconByName('Azorius'),
         active: true,
