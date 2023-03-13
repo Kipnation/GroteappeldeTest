@@ -16,7 +16,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: AIcon});
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
@@ -32,7 +32,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: AIcon});
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
@@ -48,13 +48,13 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: AIcon});
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
          {
           name: "Test Marker",
-          layer: L.marker([40.57541, -74.21777])
+          layer: L.marker([40.57541, -74.21777], {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) })
         }
          ]
     },
@@ -73,7 +73,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: BIcon});
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red'}) });
        }   
       })
            },
