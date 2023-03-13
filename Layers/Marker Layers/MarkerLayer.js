@@ -16,7 +16,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
@@ -32,7 +32,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'city', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
@@ -48,7 +48,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'lightblue'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building', prefix: 'fa', markerColor: 'lightblue'}) });
        }   
       })
       },
@@ -73,7 +73,7 @@ var overLayers = [
              layer.bindPopup(feature.properties.Title);
          },
          pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red'}) });
+           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'building-shield', prefix: 'fa', markerColor: 'red'}) });
        }   
       })
            },
