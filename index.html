@@ -53,6 +53,8 @@
   var map = L.map('map', {
       fullscreenControl: true,
       zoom: 11,
+      minzoom: 11,
+      maxzoom: 16,
       center: L.latLng([40.719485, -74.030686]),
       attributionControl: false,
       maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0)
