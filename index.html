@@ -26,14 +26,17 @@
 
     <!--Scripts for GeoJSON files for Markers-->
       <script src="Layers/Marker Data/AzoriusGuildhall.js"></script>
-      <script src="Layers/Marker Data/AzoriusPrecinctOffice.js"></script>
-	    <script src="Layers/Marker Data/AzoriusDistrictOffice.js"></script>
+      <script src="Layers/Marker Data/AzoriusPrecinctOffices.js"></script>
+	    <script src="Layers/Marker Data/AzoriusDistrictOffices.js"></script>
       <script src="Layers/Marker Data/AzoriusJeleenBuildings.js"></script>
 	    <script src="Layers/Marker Data/AzoriusLyevBuildings.js"></script>
       <script src="Layers/Marker Data/AzoriusSovaBuildings.js"></script>
       <script src="Layers/Marker Data/AzoriusPrisons.js"></script>
-      <script src="Layers/Marker Data/AzoriusPOIs.js"></script>
+      <script src="Layers/Marker Data/AzoriusPOIs.js"></script>	    
+      <script src="Layers/Marker Data/BorosGuildhall.js"></script>
+      <script src="Layers/Marker Data/BorosCitadels.js"></script>
 	    <script src="Layers/Marker Data/BorosGarrisons.js"></script>
+      <script src="Layers/Marker Data/BorosPOIs.js"></script>
       <script src="Layers/Marker Data/SelesnyaGuildhall.js"></script>
       <script src="Layers/Marker Data/SelesnyaVernadi.js"></script>
 	    <script src="Layers/Marker Data/SelesnyaFoodPantries.js"></script>
@@ -57,7 +60,10 @@
       attributionControl: false,
       maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0)
     }),
-    osmLayer = new L.TileLayer('Maps/{z}/{x}/{y}.png');
+    osmLayer = new L.TileLayer('Maps/{z}/{x}/{y}.png',{
+      minZoom:11,
+      maxZoom:16
+    });
 
     map.addLayer(osmLayer);
 
@@ -73,6 +79,10 @@
 <script type="text/javascript" src="Layers/Marker Data/MarkerIcons.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/BaseLayer.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/MarkerLayer.js"></script>
+
+<script>
+
+</script>
 
 </body>
 </html>

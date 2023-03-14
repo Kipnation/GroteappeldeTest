@@ -24,7 +24,7 @@ var overLayers = [
         name: "Precinct Offices",
         icon: iconByName('Azorius'),
         active: true,
-        layer: L.geoJson(AzoriusPrecinctOffice, {
+        layer: L.geoJson(AzoriusPrecinctOffices, {
          style: function (feature) {
              return feature.properties.style;
          },
@@ -40,7 +40,7 @@ var overLayers = [
         name: "District Offices",
         icon: iconByName('Azorius'),
         active: true,
-        layer: L.geoJson(AzoriusDistrictOffice, {
+        layer: L.geoJson(AzoriusDistrictOffices, {
          style: function (feature) {
              return feature.properties.style;
          },
@@ -117,7 +117,7 @@ var overLayers = [
       })
       },
       {
-        name: "POIs",
+        name: "POI's",
         icon: iconByName('Azorius'),
         active: true,
         layer: L.geoJson(AzoriusPOIs, {
@@ -137,26 +137,71 @@ var overLayers = [
     {
       group: "Boros Legion",
       collapsed: true,
-      layers: [{
-        name: "Boros Garrisons",
-        icon: iconByName('Boros'),
-        active: true,
-        layer: L.geoJson(BorosGarrison, {
-         style: function (feature) {
-             return feature.properties.style;
-         },
-         onEachFeature: function (feature, layer) {
-             layer.bindPopup(feature.properties.Title);
-         },
-         pointToLayer: function(feature,latlng){
-           return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'shield-halved', prefix: 'fa', markerColor: 'red'}) });
-       }   
-      })
+      layers: [
+        {
+          name: "Boros Guildhall",
+          icon: iconByName('Boros'),
+          active: true,
+          layer: L.geoJson(BorosGuildhall, {
+           style: function (feature) {
+               return feature.properties.style;
            },
-           {
-             name: "Test Marker",
-             layer: L.marker([40.57541, -74.21777])
-           }
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'red'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Boros Citadels",
+          icon: iconByName('Boros'),
+          active: true,
+          layer: L.geoJson(BorosCitadels, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'fort-awesome', prefix: 'fa', markerColor: 'red'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Boros Garrisons",
+          icon: iconByName('Boros'),
+          active: true,
+          layer: L.geoJson(BorosGarrisons, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'shield-halved', prefix: 'fa', markerColor: 'red'}) });
+         }   
+        }) 
+        },
+        {
+          name: "POI's",
+          icon: iconByName('Boros'),
+          active: true,
+          layer: L.geoJson(BorosPOIs, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'red'}) });
+         }   
+        }) 
+        }
           ]
       },
       {

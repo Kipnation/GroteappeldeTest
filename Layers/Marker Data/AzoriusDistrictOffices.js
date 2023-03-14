@@ -1,4 +1,4 @@
-var AzoriusDistrictOffice = {
+var AzoriusDistrictOffices = {
     "type": "FeatureCollection",
     "features": [
    {

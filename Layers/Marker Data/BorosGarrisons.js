@@ -1,4 +1,4 @@
-var BorosGarrison = {
+var BorosGarrisons = {
     "type": "FeatureCollection",
     "features": [
    {
