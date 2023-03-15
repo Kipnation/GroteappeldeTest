@@ -101,7 +101,7 @@ var overLayers = [
       })
       },
       {
-        name: "Azorius Prisons",
+        name: "Prisons",
         icon: iconByName('Azorius'),
         active: true,
         layer: L.geoJson(AzoriusPrisons, {
@@ -139,7 +139,7 @@ var overLayers = [
       collapsed: true,
       layers: [
         {
-          name: "Boros Guildhall",
+          name: "Guildhall",
           icon: iconByName('Boros'),
           active: true,
           layer: L.geoJson(BorosGuildhall, {
@@ -155,7 +155,7 @@ var overLayers = [
         }) 
         },
         {
-          name: "Boros Citadels",
+          name: "Citadels",
           icon: iconByName('Boros'),
           active: true,
           layer: L.geoJson(BorosCitadels, {
@@ -171,7 +171,7 @@ var overLayers = [
         }) 
         },
         {
-          name: "Boros Garrisons",
+          name: "Garrisons",
           icon: iconByName('Boros'),
           active: true,
           layer: L.geoJson(BorosGarrisons, {
@@ -366,14 +366,39 @@ var overLayers = [
       {
       group: "Simic Combine",
       collapsed: true,
-      layers: [{
-             name: "Test Marker",
-             layer: L.marker([40.61296, -74.29110])
+      layers: [
+        {
+          name: "Guildhall",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicGuildhall, {
+           style: function (feature) {
+               return feature.properties.style;
            },
-           {
-             name: "Test Marker",
-             layer: L.marker([40.59095, -74.22953])
-           }
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Zonots",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicZonots, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'bridge-water', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
           ]
       }
     ];
