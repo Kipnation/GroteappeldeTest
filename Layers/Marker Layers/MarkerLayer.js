@@ -150,7 +150,7 @@ var overLayers = [
                layer.bindPopup(feature.properties.Title);
            },
            pointToLayer: function(feature,latlng){
-             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'red'}) });
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'lightred'}) });
          }   
         }) 
         },
@@ -166,7 +166,7 @@ var overLayers = [
                layer.bindPopup(feature.properties.Title);
            },
            pointToLayer: function(feature,latlng){
-             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'fort-awesome', prefix: 'fa', markerColor: 'red'}) });
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'fort-awesome', prefix: 'fa', markerColor: 'lightred'}) });
          }   
         }) 
         },
@@ -182,7 +182,7 @@ var overLayers = [
                layer.bindPopup(feature.properties.Title);
            },
            pointToLayer: function(feature,latlng){
-             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'shield-halved', prefix: 'fa', markerColor: 'red'}) });
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'shield-halved', prefix: 'fa', markerColor: 'lightred'}) });
          }   
         }) 
         },
@@ -198,7 +198,7 @@ var overLayers = [
                layer.bindPopup(feature.properties.Title);
            },
            pointToLayer: function(feature,latlng){
-             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'red'}) });
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'lightred'}) });
          }   
         }) 
         }
@@ -259,10 +259,135 @@ var overLayers = [
       {
       group: "Izzet League",
       collapsed: true,
-      layers: [{
-             name: "Test Marker",
-             layer: L.marker([40.59997, -74.25834])
-           }
+      layers: [
+        {
+          name: "Guildhall",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetGuildhall, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Laboratories",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetLaboratories, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'vihara', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Workshops",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetWorkshops, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'microscope', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Boilerworks",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetBoilerworks, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'oil-well', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Sewerageworks",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetSewerageworks, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'faucet', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Test & Training Ranges",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetTTR, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'explosion', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Universities",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetUniversities, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'school', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
+        {
+          name: "POI's",
+          icon: iconByName('Izzet'),
+          active: true,
+          layer: L.geoJson(IzzetPOIs, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'darkpurple'}) });
+         }   
+        }) 
+        },
           ]
       },
       {
