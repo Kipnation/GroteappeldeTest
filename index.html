@@ -25,38 +25,38 @@
     <script src="Plugins/leaflet.awesome-markers.js"></script>
 
     <!--Scripts for GeoJSON files for Markers-->
-      <script src="Layers/Marker Data/AzoriusGuildhall.js"></script>
-      <script src="Layers/Marker Data/AzoriusPrecinctOffices.js"></script>
-	    <script src="Layers/Marker Data/AzoriusDistrictOffices.js"></script>
-      <script src="Layers/Marker Data/AzoriusJeleenBuildings.js"></script>
-	    <script src="Layers/Marker Data/AzoriusLyevBuildings.js"></script>
-      <script src="Layers/Marker Data/AzoriusSovaBuildings.js"></script>
-      <script src="Layers/Marker Data/AzoriusPrisons.js"></script>
-      <script src="Layers/Marker Data/AzoriusPOIs.js"></script>	    
-      <script src="Layers/Marker Data/BorosGuildhall.js"></script>
-      <script src="Layers/Marker Data/BorosCitadels.js"></script>
-	    <script src="Layers/Marker Data/BorosGarrisons.js"></script>
-      <script src="Layers/Marker Data/BorosPOIs.js"></script>
-      <script src="Layers/Marker Data/RakdosGuildhall.js"></script>
-      <script src="Layers/Marker Data/RakdosEntertainment.js"></script>
-      <script src="Layers/Marker Data/RakdosFactories.js"></script>
-      <script src="Layers/Marker Data/RakdosMines.js"></script>
-      <script src="Layers/Marker Data/RakdosPOIs.js"></script>
-      <script src="Layers/Marker Data/SelesnyaGuildhall.js"></script>
-      <script src="Layers/Marker Data/SelesnyaVernadi.js"></script>
-	    <script src="Layers/Marker Data/SelesnyaFoodPantries.js"></script>
-	    <script src="Layers/Marker Data/SelesnyaCommunityCenters.js"></script>
-	    <script src="Layers/Marker Data/SelesnyaGardens.js"></script>	    
-      <script src="Layers/Marker Data/SimicGuildhall.js"></script>
-      <script src="Layers/Marker Data/SimicZonots.js"></script>
-      <script src="Layers/Marker Data/IzzetGuildhall.js"></script>      
-      <script src="Layers/Marker Data/IzzetLaboratories.js"></script>
-      <script src="Layers/Marker Data/IzzetWorkshops.js"></script>
-      <script src="Layers/Marker Data/IzzetBoilerworks.js"></script>
-      <script src="Layers/Marker Data/IzzetSewerageworks.js"></script>
-      <script src="Layers/Marker Data/IzzetTTR.js"></script>
-      <script src="Layers/Marker Data/IzzetUniversities.js"></script>
-      <script src="Layers/Marker Data/IzzetPOIs.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusGuildhall.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusPrecinctOffices.js"></script>
+	    <script src="Layers/Marker Data/Azorius/AzoriusDistrictOffices.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusJeleenBuildings.js"></script>
+	    <script src="Layers/Marker Data/Azorius/AzoriusLyevBuildings.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusSovaBuildings.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusPrisons.js"></script>
+      <script src="Layers/Marker Data/Azorius/AzoriusPOIs.js"></script>	    
+      <script src="Layers/Marker Data/Boros/BorosGuildhall.js"></script>
+      <script src="Layers/Marker Data/Boros/BorosCitadels.js"></script>
+	    <script src="Layers/Marker Data/Boros/BorosGarrisons.js"></script>
+      <script src="Layers/Marker Data/Boros/BorosPOIs.js"></script>
+      <script src="Layers/Marker Data/Rakdos/RakdosGuildhall.js"></script>
+      <script src="Layers/Marker Data/Rakdos/RakdosEntertainment.js"></script>
+      <script src="Layers/Marker Data/Rakdos/RakdosFactories.js"></script>
+      <script src="Layers/Marker Data/Rakdos/RakdosMines.js"></script>
+      <script src="Layers/Marker Data/Rakdos/RakdosPOIs.js"></script>
+      <script src="Layers/Marker Data/Selesnya/SelesnyaGuildhall.js"></script>
+      <script src="Layers/Marker Data/Selesnya/SelesnyaVernadi.js"></script>
+	    <script src="Layers/Marker Data/Selesnya/SelesnyaFoodPantries.js"></script>
+	    <script src="Layers/Marker Data/Selesnya/SelesnyaCommunityCenters.js"></script>
+	    <script src="Layers/Marker Data/Selesnya/SelesnyaGardens.js"></script>	    
+      <script src="Layers/Marker Data/Simic/SimicGuildhall.js"></script>
+      <script src="Layers/Marker Data/Simic/SimicZonots.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetGuildhall.js"></script>      
+      <script src="Layers/Marker Data/Izzet/IzzetLaboratories.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetWorkshops.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetBoilerworks.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetSewerageworks.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetTTR.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetUniversities.js"></script>
+      <script src="Layers/Marker Data/Izzet/IzzetPOIs.js"></script>
 
     <style>
       body { margin:0; padding:0; width:100%; height:100%; background: #dddddd; }
@@ -65,6 +65,7 @@
   </head>
 
 <body>
+  <div class="loader">Loading...</div>
   <div id="map"></div>  
 
 <script>
@@ -91,7 +92,6 @@
 </script>
 
 <!--Scripts for the Layers-->
-<script type="text/javascript" src="Layers/Marker Data/MarkerIcons.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/BaseLayer.js"></script>
 <script type="text/javascript" src="Layers/Marker Layers/MarkerLayer.js"></script>
 

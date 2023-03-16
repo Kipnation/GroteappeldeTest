@@ -239,7 +239,8 @@ var overLayers = [
              return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'masks-theater', prefix: 'fa', markerColor: 'darkred'}) });
          }   
         }) 
-        },{
+        },
+        {
           name: "Factories",
           icon: iconByName('Rakdos'),
           active: true,
@@ -254,7 +255,8 @@ var overLayers = [
              return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'industry', prefix: 'fa', markerColor: 'darkred'}) });
          }   
         }) 
-        },{
+        },
+        {
           name: "Mines",
           icon: iconByName('Rakdos'),
           active: true,
@@ -269,7 +271,8 @@ var overLayers = [
              return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'person-digging', prefix: 'fa', markerColor: 'darkred'}) });
          }   
         }) 
-        },{
+        },
+        {
           name: "POI's",
           icon: iconByName('Rakdos'),
           active: true,
@@ -290,14 +293,15 @@ var overLayers = [
       {
       group: "Golgari Swarm",
       collapsed: true,
-      layers: [{
+      layers: [
+        {
              name: "Test Marker",
-             layer: L.marker([40.60471, -74.27431])
+             layer: L.marker([40.60471, -74.27431], {
+              pointToLayer: function(feature,latlng){
+              return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'darkgreen'}) });
+          }   
+         })
            },
-           {
-             name: "Test Marker",
-             layer: L.marker([40.57541, -74.21777])
-           }
           ]
       },	 
       {
