@@ -394,7 +394,7 @@ var overLayers = [
                layer.bindPopup(feature.properties.Title);
            },
            pointToLayer: function(feature,latlng){
-             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'car-battery', prefix: 'fa', markerColor: 'darkpurple'}) });
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'plug', prefix: 'fa', markerColor: 'darkpurple'}) });
          }   
         }) 
         },
