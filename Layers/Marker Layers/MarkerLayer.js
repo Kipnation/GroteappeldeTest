@@ -207,14 +207,84 @@ var overLayers = [
       {
       group: "Cult of Rakdos",
       collapsed: true,
-      layers: [{
-             name: "Test Marker",
-             layer: L.marker([40.61056, -74.27659])
+      layers: [
+        {
+          name: "Guildhall",
+          icon: iconByName('Rakdos'),
+          active: true,
+          layer: L.geoJson(RakdosGuildhall, {
+           style: function (feature) {
+               return feature.properties.style;
            },
-           {
-             name: "Test Marker",
-             layer: L.marker([40.59193, -74.29033])
-           }
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'landmark-dome', prefix: 'fa', markerColor: 'darkred'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Entertainment Venue",
+          icon: iconByName('Rakdos'),
+          active: true,
+          layer: L.geoJson(RakdosEntertainment, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'masks-theater', prefix: 'fa', markerColor: 'darkred'}) });
+         }   
+        }) 
+        },{
+          name: "Factories",
+          icon: iconByName('Rakdos'),
+          active: true,
+          layer: L.geoJson(RakdosFactories, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'industry', prefix: 'fa', markerColor: 'darkred'}) });
+         }   
+        }) 
+        },{
+          name: "Mines",
+          icon: iconByName('Rakdos'),
+          active: true,
+          layer: L.geoJson(RakdosMines, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'person-digging', prefix: 'fa', markerColor: 'darkred'}) });
+         }   
+        }) 
+        },{
+          name: "POI's",
+          icon: iconByName('Rakdos'),
+          active: true,
+          layer: L.geoJson(RakdosPOIs, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'location-pin', prefix: 'fa', markerColor: 'darkred'}) });
+         }   
+        }) 
+        },
           ]
       },
       {
