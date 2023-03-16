@@ -4,7 +4,7 @@
   "description": "",
   "attribution": "<a href=\"https://www.maptiler.com/engine/\">Rendered with MapTiler Engine</a>, non-commercial use only",
   "type": "baselayer",
-  "color": "#FFFFFF",
+  "color": "#DDDDDD",
   "format": "png",
   "minzoom": "11",
   "maxzoom": "16",
