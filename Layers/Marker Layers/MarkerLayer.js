@@ -598,6 +598,70 @@ var overLayers = [
          }   
         }) 
         },
+        {
+          name: "Hospitals",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicHospitals, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'hospital', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Medical Centers",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicCenters, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'house-medical', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Medical Labs",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicLabs, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'syringe', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
+        {
+          name: "Zoos",
+          icon: iconByName('Simic'),
+          active: true,
+          layer: L.geoJson(SimicZoos, {
+           style: function (feature) {
+               return feature.properties.style;
+           },
+           onEachFeature: function (feature, layer) {
+               layer.bindPopup(feature.properties.Title);
+           },
+           pointToLayer: function(feature,latlng){
+             return L.marker(latlng,{icon: L.AwesomeMarkers.icon({icon: 'paw', prefix: 'fa', markerColor: 'darkblue'}) });
+         }   
+        }) 
+        },
           ]
       }
     ];
