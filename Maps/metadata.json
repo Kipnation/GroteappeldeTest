@@ -1,14 +1,13 @@
 {
-  "name": "New folder",
+  "name": "Maps",
   "version": "1.1.0",
   "description": "",
-  "attribution": "<a href=\"https://www.maptiler.com/engine/\">Rendered with MapTiler Engine</a>, non-commercial use only",
-  "type": "baselayer",
-  "color": "#DDDDDD",
+  "attribution": "<a href=\"https://www.maptiler.com/engine/\">Rendered with MapTiler Engine</a>",
+  "type": "overlay",
   "format": "png",
   "minzoom": "11",
   "maxzoom": "16",
   "scale": "1.000000",
-  "bounds": [-74.30624224, 40.55871090, -74.19904432, 40.64005506],
+  "bounds": [-74.33442183, 40.49473037, -74.01495192, 40.73152026],
   "profile": "mercator"
 }

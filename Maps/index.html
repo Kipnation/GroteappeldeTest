@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maps</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://cdn.maptiler.com/tileviewer/v1/index.css" type="text/css"/>
+    <script src="https://cdn.maptiler.com/tileviewer/v1/index.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var GOOGLEMAPS_KEY = '';
+      var data = {
+        "name": "Maps",
+        "version": "1.0.0",
+        "description": "",
+        "type": "overlay",
+        "format": "png",
+        "minzoom": "11",
+        "maxzoom": "16",
+        "bounds": "-74.33442183,40.49473037,-74.01495192,40.73152026",
+        "scale": "1.000000",
+        "profile": "mercator"
+      };
+      tileserver(data);
+    </script>
+  </body>
+</html>
