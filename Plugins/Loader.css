@@ -13,6 +13,9 @@
   
   #loading-image {
     position: absolute;
-    top: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     z-index: 100;
   }
